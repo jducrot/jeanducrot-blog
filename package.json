@@ -8,7 +8,8 @@
     "build": "buildawesome",
     "start": "buildawesome --serve",
     "a11y": "npm run build && node scripts/a11y.mjs",
-    "og": "node scripts/og.mjs"
+    "og": "node scripts/og.mjs",
+    "lighthouse": "npm run build && node scripts/lighthouse.mjs"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +22,7 @@
     "@axe-core/puppeteer": "^4.13.0",
     "@fontsource/bricolage-grotesque": "^5.3.0",
     "@resvg/resvg-js": "^2.6.2",
+    "chrome-launcher": "^1.2.2",
     "http-server": "^14.1.1",
     "lighthouse": "^13.5.0",
     "pa11y-ci": "^5.0.0",
