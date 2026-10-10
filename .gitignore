@@ -7,3 +7,4 @@ _site/
 .lighthouseci/
 lighthouse-report*
 npm-debug.log*
+.pa11yci.generated.json
