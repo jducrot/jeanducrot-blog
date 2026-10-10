@@ -1,0 +1,15 @@
+---
+layout: layouts/base.njk
+---
+<article class="page">
+  <a class="back" href="/#work">All selected work</a>
+  <h1>{{ title }}</h1>
+  <p class="where">{{ organization }}, {{ dates }}</p>
+  <div class="summary-box">
+    <p>{{ summary }}</p>
+    <span class="result">{{ result }}</span>
+  </div>
+  <div class="prose">
+    {{ content | safe }}
+  </div>
+</article>

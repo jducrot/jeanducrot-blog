@@ -1,0 +1,55 @@
+{
+  "summary": "Technical product leader with 25 years in software, 20 of them hands-on as a full-stack engineer. Six years running accessibility governance and compliance programs at Pearson and Elsevier. Focused on technical product management for AI-native platforms in regulated environments.",
+  "experience": [
+    {
+      "org": "Elsevier",
+      "dates": "2024–2026",
+      "role": "Division technical operations lead",
+      "points": [
+        "Owned intake, backlog governance, and roadmap operations for the largest division, covering 40+ product teams.",
+        "Co-authored the global Definition of Done and established the KPI framework for defect escape and remediation velocity.",
+        "Led adoption of an AI-augmented documentation and testing platform, cutting documentation production time 50%."
+      ]
+    },
+    {
+      "org": "Pearson",
+      "dates": "2021–2023",
+      "role": "Program leadership",
+      "points": [
+        "Ran a nine-month remediation program across ten product teams that ended in a written withdrawal of a federal complaint.",
+        "Built a company-wide Figma annotation toolkit and design review workflow, with Axe and Cypress wired into CI/CD; defect escape rate fell 66% in three months."
+      ]
+    },
+    {
+      "org": "TPGi",
+      "dates": "",
+      "role": "Program leadership",
+      "points": []
+    },
+    {
+      "org": "Interfolio",
+      "dates": "2014–2020",
+      "role": "Full-stack engineer",
+      "points": [
+        "Architected a component library in Angular, documented in Storybook, that became the engineering standard across all product lines.",
+        "Led compliance work for NYU, SUNY, and the University of Washington."
+      ]
+    },
+    {
+      "org": "U.S. Air Force, the Pentagon",
+      "dates": "",
+      "role": "Enterprise software developer",
+      "points": []
+    }
+  ],
+  "other": [
+    "Independent advisory practice serving a dozen organizations.",
+    "Board member, Beyond My Battle.",
+    "Speaker, CSUN 2025: the ION Framework for evaluating AI chat interfaces."
+  ],
+  "education": [
+    "B.S. in Business Administration and Information Technology, Colorado Technical University",
+    "CPWA certification"
+  ],
+  "languages": "English, French (bilingual)"
+}

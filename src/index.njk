@@ -1,0 +1,81 @@
+---
+layout: layouts/base.njk
+permalink: /
+---
+<div class="hero">
+  <div class="hero-top">
+    <h1>I keep large engineering organizations moving <em>without breaking the rules they can't afford to break.</em></h1>
+    <img class="headshot" src="/headshot.jpg" width="220" height="220" alt="Portrait of Jean Ducrot, smiling, facing the camera">
+  </div>
+  <p class="lede">Twenty-five years in software, twenty of them shipping code. I run the operating model between Product, Design, and Engineering for regulated, high-stakes platforms, and I'm now pointing that experience at AI-native products.</p>
+  <div class="cta">
+    <a class="btn" href="#work">See the work</a>
+    <a href="#contact">Get in touch</a>
+  </div>
+  <dl class="now">
+    <div><dt>Most recently</dt><dd>Division technical operations lead, Elsevier (40+ product teams)</dd></div>
+    <div><dt>Based in</dt><dd>Saratoga Springs, NY — remote-first</dd></div>
+    <div><dt>Speaking</dt><dd>CSUN 2025: the ION Framework for AI chat interfaces</dd></div>
+  </dl>
+</div>
+
+<section id="work" class="section" aria-labelledby="work-h">
+  <h2 id="work-h">Selected work</h2>
+  <ul class="work">
+    {%- for item in collections.workSorted %}
+    <li>
+      <div>
+        <h3><a href="{{ item.url }}">{{ item.data.title }}</a></h3>
+        <div class="where">{{ item.data.organization }}, {{ item.data.dates }}</div>
+      </div>
+      <div>
+        <p>{{ item.data.summary }}</p>
+        <span class="result">{{ item.data.result }}</span>
+        <a class="more" href="{{ item.url }}">Read the case study<span class="sr-only">: {{ item.data.title }}</span></a>
+      </div>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+
+<section id="talks" class="section" aria-label="Talks, writing, and how I work">
+  <div class="split">
+    <div>
+      <h2>Talks and writing</h2>
+      <ul class="list">
+        {%- for entry in collections.writingSorted %}
+        {%- set href = entry.data.url or (entry.url if entry.url) %}
+        <li>
+          <span>{% if href %}<a href="{{ href }}">{{ entry.data.title }}</a>{% else %}{{ entry.data.title }}{% endif %}</span>
+          <span class="label">{{ entry.data.label }}</span>
+        </li>
+        {%- endfor %}
+      </ul>
+    </div>
+    <div>
+      <h2>How I work</h2>
+      <ul class="list">
+        <li><span>Technical empathy over process administration: I've shipped the code, so I know where roadmaps actually get stuck.</span></li>
+        <li><span>Compliance as velocity: standards belong in the Definition of Done and the pipeline, not in a review at the end.</span></li>
+        <li><span>Tooling as a force multiplier: the right workflow changes behavior faster than any training program.</span></li>
+        <li><span>AI-augmented by default: I use AI in documentation, evaluation, and program throughput, and I evaluate AI interfaces with the same rigor.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section about" aria-labelledby="about-h">
+  <h2 id="about-h">About</h2>
+  <p>I'm a French-named, sports-loving, upstate New York technologist. I started writing enterprise software for the Air Force at the Pentagon, spent a decade as a full-stack engineer at Interfolio, then moved into program leadership at TPGi, Pearson, and Elsevier. Along the way I ran my own advisory practice for a dozen organizations and sat on the board of Beyond My Battle.</p>
+  <p>I'm bilingual in English and French, hold a CPWA certification, and have a bachelor's in business administration and information technology from Colorado Technical University. Off the clock: hockey, cycling, and whatever's on at Saratoga.</p>
+</section>
+
+<section id="contact" class="section contact" aria-labelledby="contact-h">
+  <h2 id="contact-h">Building something in a regulated space and need it to move faster?</h2>
+  <p>I'm open to technical product and engineering operations leadership roles, remote-first. Email is best.</p>
+  <div class="cta">
+    <a class="btn" href="mailto:{{ site.email }}">Email Jean</a>
+    <a href="{{ site.linkedin }}">LinkedIn</a>
+    <a href="{{ site.github }}">GitHub</a>
+  </div>
+</section>

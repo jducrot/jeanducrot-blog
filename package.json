@@ -1,0 +1,23 @@
+{
+  "name": "jeanducrot-site",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "buildawesome --serve",
+    "build": "buildawesome",
+    "start": "buildawesome --serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Personal portfolio for Jean Ducrot",
+  "type": "module",
+  "private": "true",
+  "devDependencies": {
+    "@awesome.me/buildawesome": "^4.0.0-alpha.10"
+  },
+  "dependencies": {
+    "@fontsource-variable/bricolage-grotesque": "^5.3.0"
+  }
+}

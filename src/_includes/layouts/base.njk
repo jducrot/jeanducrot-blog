@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+{%- set fullTitle = site.title if (page.url == "/" or not title) else (title + " — " + site.name) %}
+{%- set desc = description or summary or site.description %}
+{%- set canonical = (site.url + page.url) if page.url else site.url %}
+<title>{{ fullTitle }}</title>
+<meta name="description" content="{{ desc }}">
+<link rel="canonical" href="{{ canonical }}">
+<meta property="og:type" content="{{ 'website' if page.url == '/' else 'article' }}">
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:title" content="{{ fullTitle }}">
+<meta property="og:description" content="{{ desc }}">
+<meta property="og:url" content="{{ canonical }}">
+<meta property="og:image" content="{{ site.url }}/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Jean Ducrot, technical product leader">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="{{ site.name }}: talks and writing" href="/rss.xml">
+<script>
+(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t)}}catch(e){}})();
+</script>
+<link rel="preload" href="/assets/fonts/files/bricolage-grotesque-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/fonts/bricolage.css">
+<link rel="stylesheet" href="/css/site.css">
+{%- if page.url == "/" %}
+<script type="application/ld+json">{{ personJsonLd | safe }}</script>
+{%- endif %}
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+  <header class="site-header">
+    <a class="brand" href="/">Jean Ducrot</a>
+    <nav class="site-nav" aria-label="Primary">
+      <ul>
+        <li><a href="/#work">Work</a></li>
+        <li><a href="/#talks">Talks</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="theme" id="theme" type="button" aria-pressed="false" hidden>Dark mode</button>
+  </header>
+
+  <main id="main" tabindex="-1">
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer">
+    <span>© {{ site.year }} Jean Ducrot</span>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="/resume/">Résumé</a></li>
+        <li><a href="/rss.xml">RSS feed</a></li>
+        <li><a href="{{ site.github }}">GitHub</a></li>
+        <li><a href="{{ site.linkedin }}">LinkedIn</a></li>
+      </ul>
+    </nav>
+  </footer>
+</div>
+<script src="/js/theme.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+---
+layout: layouts/base.njk
+---
+<article class="page">
+  <a class="back" href="/#talks">All talks and writing</a>
+  <h1>{{ title }}</h1>
+  <p class="where">{{ label }}{% if year %}, {{ year }}{% endif %}</p>
+  <div class="prose">
+    {{ content | safe }}
+  </div>
+</article>

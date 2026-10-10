@@ -1,0 +1,39 @@
+---
+layout: layouts/base.njk
+permalink: /resume/
+title: Résumé
+description: Résumé of Jean Ducrot, technical product leader, as a PDF and in plain HTML.
+---
+<div class="page">
+  <a class="back" href="/">Home</a>
+  <h1>Résumé</h1>
+  <p class="resume-actions"><a class="btn" href="/jean-ducrot-resume.pdf">Download the PDF résumé</a></p>
+  <div class="prose">
+    <p>{{ resume.summary }}</p>
+
+    <h2>Experience</h2>
+    {%- for job in resume.experience %}
+    <div class="resume-job">
+      <h3>{{ job.role }}, {{ job.org }}{% if job.dates %} <span class="where">({{ job.dates }})</span>{% endif %}</h3>
+      {%- if job.points.length %}
+      <ul>
+        {%- for p in job.points %}<li>{{ p }}</li>{%- endfor %}
+      </ul>
+      {%- endif %}
+    </div>
+    {%- endfor %}
+
+    <h2>Also</h2>
+    <ul>
+      {%- for o in resume.other %}<li>{{ o }}</li>{%- endfor %}
+    </ul>
+
+    <h2>Education and certification</h2>
+    <ul>
+      {%- for e in resume.education %}<li>{{ e }}</li>{%- endfor %}
+    </ul>
+
+    <h2>Languages</h2>
+    <p>{{ resume.languages }}</p>
+  </div>
+</div>

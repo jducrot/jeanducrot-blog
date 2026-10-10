@@ -1,0 +1,24 @@
+---
+permalink: /rss.xml
+eleventyExcludeFromCollections: true
+sitemap: false
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.name }}: talks and writing</title>
+    <link>{{ site.url }}/</link>
+    <description>Talks and writing by {{ site.name }}.</description>
+    <language>en-us</language>
+    <atom:link href="{{ site.url }}/rss.xml" rel="self" type="application/rss+xml"/>
+    {%- for entry in collections.writingSorted %}
+    {%- set href = entry.data.url or (entry.url if entry.url) or "/#talks" %}
+    <item>
+      <title>{{ entry.data.title | xmlEscape }}</title>
+      <link>{{ href | absoluteUrl(site.url) }}</link>
+      <guid isPermaLink="false">{{ entry.fileSlug }}</guid>
+      <description>{{ (entry.data.label ~ (", " ~ entry.data.year if entry.data.year else "")) | xmlEscape }}</description>
+    </item>
+    {%- endfor %}
+  </channel>
+</rss>
