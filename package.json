@@ -15,7 +15,13 @@
   "type": "module",
   "private": "true",
   "devDependencies": {
-    "@awesome.me/buildawesome": "^4.0.0-alpha.10"
+    "@awesome.me/buildawesome": "^4.0.0-alpha.10",
+    "@fontsource/bricolage-grotesque": "^5.3.0",
+    "@resvg/resvg-js": "^2.6.2",
+    "http-server": "^14.1.1",
+    "lighthouse": "^13.5.0",
+    "pa11y-ci": "^5.0.0",
+    "satori": "^0.47.1"
   },
   "dependencies": {
     "@fontsource-variable/bricolage-grotesque": "^5.3.0"
