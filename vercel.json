@@ -1,4 +1,8 @@
 {
+  "framework": null,
+  "installCommand": "npm install",
+  "buildCommand": "npm run build",
+  "outputDirectory": "_site",
   "trailingSlash": true,
   "redirects": [
     { "source": "/feed.xml", "destination": "/rss.xml", "permanent": true }
