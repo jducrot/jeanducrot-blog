@@ -29,7 +29,8 @@
     "satori": "^0.47.1"
   },
   "dependencies": {
-    "@fontsource-variable/bricolage-grotesque": "^5.3.0"
+    "@fontsource-variable/bricolage-grotesque": "^5.3.0",
+    "@vercel/analytics": "^2.0.1"
   },
   "engines": {
     "node": ">=22.15"
